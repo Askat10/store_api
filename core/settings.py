@@ -179,3 +179,12 @@ DJOSER = {
 
 # allows for frontend with urls:
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+EMAIL_HOST_USER = os.getenv("EMAIL_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_PORT = os.getenv("EMAIL_PORT")
+EMAIL_USE_TLS = os.getenv("USE_TLS", True)
+
+
