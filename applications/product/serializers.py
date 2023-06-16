@@ -18,7 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
     )
     
     class Meta:
-        models = Product
+        model = Product
         fields = '__all__'
         extra_kwargs = {
             'user': {'read_only': True},
