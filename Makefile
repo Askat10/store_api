@@ -6,3 +6,5 @@ migrate:
 
 makemigrations:
 	python3 manage.py makemigrations
+celery:
+	celery -A core worker -l INFO

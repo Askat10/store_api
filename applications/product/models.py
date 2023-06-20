@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_save, post_save
 
-from applications.product.signals import get_pre_save
+from applications.product.signals import get_pre_save, product_post_save
 
 class Product(models.Model):
     slug = models.SlugField(primary_key=True, blank=True)
@@ -37,3 +37,4 @@ class ProductImage(models.Model):
 
 
 pre_save.connect(get_pre_save, sender=Product)
+post_save.connect(product_post_save, sender=Product)
